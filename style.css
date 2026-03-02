@@ -21,11 +21,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -33,7 +41,6 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     background-color: var(--bg-white);
-    overflow-x: hidden;
 }
 
 h1,
@@ -333,6 +340,8 @@ section {
 .about-image .image-wrapper {
     position: relative;
     padding-bottom: 20px;
+    padding-right: 25px;
+    /* Add space for the overlapping card */
 }
 
 .about-image img {
@@ -346,7 +355,8 @@ section {
 .experience-card {
     position: absolute;
     top: 10%;
-    right: -25px;
+    right: 0;
+    /* Align to the padded edge instead of negative offset */
     background: var(--primary);
     color: white;
     padding: 2rem;
@@ -366,7 +376,6 @@ section {
     margin-bottom: 1.5rem;
     font-size: 1.1rem;
     color: var(--text-muted);
-    text-align: justify;
 }
 
 .about-features {
@@ -402,7 +411,7 @@ section {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 2rem;
 }
 
@@ -464,12 +473,16 @@ section {
     background-color: var(--primary);
     padding: 4rem 0;
     color: white;
+    width: 100%;
+    position: relative;
+    left: 0;
 }
 
 .diff-container {
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 100%;
 }
 
 .title-white {
@@ -480,7 +493,7 @@ section {
 
 .diff-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 2.5rem;
     max-width: 1000px;
 }
@@ -725,6 +738,34 @@ section {
     .diff-list {
         grid-template-columns: 1fr;
         gap: 1.5rem;
+    }
+
+    .about-content {
+        padding: 0 1.5rem;
+    }
+
+    .about-text {
+        text-align: center;
+        padding: 0;
+        margin-bottom: 2rem;
+        font-size: 1.05rem;
+    }
+
+    .logo-hero img {
+        max-width: 80%;
+        max-height: 180px;
+        margin: 0 auto;
+    }
+
+    .differentials {
+        width: 100vw;
+        margin-left: calc(-50vw + 50%);
+        padding: 4rem 1.5rem;
+    }
+
+    .diff-list {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
     }
 
     .experience-card {
