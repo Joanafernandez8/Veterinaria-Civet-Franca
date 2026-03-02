@@ -742,13 +742,20 @@ section {
 
     .about-content {
         padding: 0 1.5rem;
+        width: 100%;
     }
 
     .about-text {
         text-align: center;
         padding: 0;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         font-size: 1.05rem;
+        width: 100%;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .logo-hero img {
@@ -758,8 +765,8 @@ section {
     }
 
     .differentials {
-        width: 100vw;
-        margin-left: calc(-50vw + 50%);
+        width: 100%;
+        margin: 0;
         padding: 4rem 1.5rem;
     }
 
